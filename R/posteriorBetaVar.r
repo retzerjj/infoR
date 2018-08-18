@@ -1,4 +1,4 @@
-#' Posterior Beta Variance 
+#' Posterior Beta Variance
 #'
 #' This function calculates posterior beta coefficeint variance prior var, SSX and true variance
 #' @param priorVar Variance of prior distribution
@@ -10,4 +10,6 @@
 #' SS.x1 <- t(as.vector(HR.x-mean(HR.x)))%*%(as.vector(HR.x-mean(HR.x))); SS.x1
 #' PostVar <- postBetaVar(1,SS.x1,.0169); PostVar
 
+
  postBetaVar <- function(priorVar, ss.x, trueVar) {postBvar <- 1/((1/priorVar) + (ss.x/trueVar)); postBvar}
+
